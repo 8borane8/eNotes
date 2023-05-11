@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>eNotes - Calculez votre moyenne école directe !</title>
+
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/index.css">
+
+        <link rel="shortcut icon" href="./assets/favicon.ico">
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <img src="./assets/logo.png" alt="logo" width="90" height="58.7">
+                <p>eNotes</p>
+            </div>
+            
+            <p>Connectez-vous</p>
+            <input type="text" placeholder="Identifiant" name="username" required>
+            <input type="password" placeholder="Mot de passe" name="password" required>
+            <div><a href="https://api.ecoledirecte.com/mot-de-passe-oublie.awp">Mot de passe oublié ?</a></div>
+            <input type="submit" value="Connexion">
+            <p>Identifiant ou mot de passe incorrect !</p>
+            <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ht6o1bdu.json" background="transparent" speed="1" loop autoplay></lottie-player>
+        </form>
+
+        <main>
+            <div></div>
+            <div>
+                <div>
+                    <p>Matière</p>
+                    <p>Notes</p>
+                    <p>Moyenne</p>
+                </div>
+            </div>
+            <p>Moyenne Générale: <span id="total-average-label"></span></p>
+        </main>
+
+        <script type="application/javascript" src="./scripts/index.js"></script>
+    </body>
+</html>

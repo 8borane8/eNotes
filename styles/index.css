@@ -1,0 +1,296 @@
+body{
+    background: linear-gradient(#0e3e85 0%, #0e8ed0 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: white;
+    width: 368px;
+    height: 500px;
+    padding: 48px 40px 36px 40px;
+
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .18);
+}
+
+form > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+form > div:nth-child(1) > img{
+    height: auto;
+}
+
+form > div:nth-child(1) > p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #0e3e85;
+}
+
+form > p:nth-child(2){
+    font-size: 35px;
+    font-weight: 500;
+    color: #0e8ed0;
+}
+
+form > input:not([type="submit"]){
+    width: calc(100% - 15px * 2);
+    margin-top: 22px;
+    padding: 15px;
+
+
+    border-style: solid;
+    border-color: #ced4da;
+    border-width: 1px;
+    border-radius: 8px;
+
+    outline: none;
+    transition: all 0.1s linear;
+}
+
+form > input:not([type="submit"]):focus{
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 .25rem #0d6efd40;
+}
+
+form > div:not(:nth-child(1)){
+    width: 100%;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form > div:not(:nth-child(1)) > a{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #999999;
+
+    text-decoration-color: white;
+    text-underline-offset: 2px;
+
+    transition: all 0.1s linear;
+}
+
+form > div:not(:nth-child(1)) > a:hover{
+    text-decoration-color: #999999;
+}
+
+form > input[type="submit"]{
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    cursor: pointer;
+
+    border-style: none;
+    border-radius: 8px;
+
+    background-color: #0f8fd1;
+    transition: all 0.1s linear;
+
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+form > input[type="submit"]:hover{
+    opacity: 0.85;
+}
+
+form > p:nth-last-child(2){
+    width: 100%;
+    margin-top: 15px;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #cd1478;
+
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+
+form > :last-child{
+    opacity: 0;
+    width: 250px;
+    height: 250px;
+    transition: all 0.1s linear;
+}
+
+
+
+
+main{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    background-color: white;
+
+    width: calc(100% - 40px * 2);
+    max-width: calc(1200px - 40px * 2);
+    padding: 30px 40px;
+}
+
+main > div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+main > div:nth-child(1) > button{
+    width: 199px;
+    padding: 8px 0px;
+    background-color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999999;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+main > div:nth-child(1) > button.active{
+    background-color: #0e8ed0;
+    color: white;
+    padding: 9px 0px;
+    width: 200px;
+    border-style: none;
+    cursor: not-allowed;
+}
+
+main > div:nth-child(1) > button:not(.active):hover{
+    background-color: #f8f8f8;
+}
+
+main > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+main > div:nth-child(2) > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+main > div:nth-child(2) > div > p{
+    font-size: 15px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+}
+
+main > div:nth-child(2) > div:nth-child(1) > p{
+    background-color: #0f8fd1;
+    color: white;
+    text-align: center;
+    border-color: #0f8fd1;
+}
+
+main > div:nth-child(2) > div > p:nth-child(1){
+    padding: 10px 0px 10px 15px;
+    width: calc(300px - 15px);
+}
+
+main > div:nth-child(2) > div > p:nth-child(2){
+    padding: 10px 0px 10px 15px;
+    width: calc(100% - 300px - 150px - 17px);
+}
+
+main > div:nth-child(2) > div > div{
+    padding: 10px 0px 10px 15px;
+    width: calc(100% - 300px - 150px - 17px);
+
+    border-width: 1px;
+    border-color: #cccccc;
+    border-style: solid solid none solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+main > div:nth-child(2) > div > div > p{
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+main > div:nth-child(2) > div > div > p > span{
+    font-size: 11px;
+    font-weight: 600;
+    color: #535353;
+}
+
+main > div:nth-child(2) > div > p:nth-child(3){
+    padding: 10px 0px;
+    text-align: center;
+    width: 150px;
+}
+
+main > div:nth-child(2) > div:nth-child(1) > *{
+    border-top-style: none;
+}
+
+
+
+/* form{
+    display: none;
+}
+
+main{
+    display: flex;
+} */
+
+
+@media screen and (max-width: 500px) {
+    form{
+        width: calc(100% - 40px * 2);
+        border-radius: 0px;
+    }
+}
