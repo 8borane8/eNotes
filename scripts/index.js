@@ -32,6 +32,7 @@ function loadNotes(notes){
 
     let finalHtml = `<div><p>Matière</p><p>Notes</p><p>Moyenne</p></div>`;
     let totalAverages = 0;
+    let sizesAverages = 0;
     for(const matiere of notesPerMatiere.keys()){
         let notesHtml = "";
         let notesTotal = 0;
@@ -46,16 +47,19 @@ function loadNotes(notes){
             coefsTotal += note.coef;
         }
 
+        let average = notesTotal / coefsTotal;
         finalHtml += `
         <div>
             <p>${matiere}</p>
             <div>${notesHtml}</div>
-            <p>${Math.round(notesTotal / coefsTotal * 100) / 100}</p>
+            <p>${Math.round(average * 100) / 100}</p>
         </div>`;
+        if(isNaN(average)){ continue; }
         totalAverages += notesTotal / coefsTotal;
+        sizesAverages += 1;
     }
     containerNotes.innerHTML = finalHtml;
-    labelTotalAverage.textContent = Math.round(totalAverages / notesPerMatiere.size * 100) / 100;
+    labelTotalAverage.textContent = Math.round(totalAverages / sizesAverages * 100) / 100;
 }
 
 function loadPeriode(event){
