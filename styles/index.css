@@ -96,6 +96,7 @@ form > div:not(:nth-child(1)) > a:hover{
 }
 
 form > input[type="submit"]{
+    appearance: none;
     width: 100%;
     margin-top: 22px;
     padding: 15px;
@@ -292,5 +293,28 @@ main{
     form{
         width: calc(100% - 40px * 2);
         border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main > div:nth-child(2) > div{
+        flex-direction: column;
+    }
+
+    main > div:nth-child(2) > div > p, main > div:nth-child(2) > div > div{
+        padding: 10px !important;
+        border-style: none solid !important;
+
+        width: calc(100% - 10px * 2 - 2px) !important;
+    }
+
+    main > div:nth-child(2) > div > p:nth-child(3){
+        border-style: none solid solid solid !important;
+    }
+
+    main > div:nth-child(2) > div:nth-child(1) > p{
+        border-style: none;
+        width: calc(100% - 10px * 2);
+        text-align: left;
     }
 }
