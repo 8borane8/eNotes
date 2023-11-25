@@ -111,8 +111,8 @@ document.querySelector("form").addEventListener("submit", async function(event){
     const response = await (await fetch(`${API_URL}/login.awp?v=${API_VERSION}`, {
         method: "POST",
         body: `data=${JSON.stringify({
-            "identifiant": inputUsername.value,
-            "motdepasse": inputPassword.value
+            "identifiant": encodeURIComponent(inputUsername.value),
+            "motdepasse": encodeURIComponent(inputPassword.value)
         })}`
     })).json();
 
